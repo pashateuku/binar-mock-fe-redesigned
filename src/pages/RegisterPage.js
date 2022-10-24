@@ -77,7 +77,6 @@ function App() {
             })
             
             if(result.data.message === 'registration success'){
-                localStorage.setItem('token', result.data.data.token);
                 ShowPrompt(
                     "success",
                     "Register Success",
