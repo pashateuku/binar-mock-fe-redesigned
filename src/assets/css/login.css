@@ -1,0 +1,68 @@
+.form-data-parent .login-button {
+  margin-top: 40px;
+
+  width: 285px;
+  height: 37px;
+
+  background: #0071E3;
+  border-radius: 24px;
+  border: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  transition: background .25s ease-out 100ms;
+}
+
+.form-data-parent .login-button p {
+  color: #FFFFFF;
+  font-weight: 700;
+  margin: 0px;
+  transition: color .25s ease-out 100ms;
+}
+
+.form-button-spinner {
+  /* for Animation fade purpose */
+  opacity: 0%;
+  max-width: 0;
+  transition: max-width 0.25s ease-out,
+              opacity 0.25s ease-out;
+
+  overflow: hidden;
+}
+
+.form-button-spinner img {
+  height: 17px;
+  animation: rotation 1.5s infinite linear;
+}
+
+    @keyframes rotation {
+      from {
+      transform: rotate(0deg);
+      }
+      to {
+      transform: rotate(359deg);
+      }
+  }
+
+.spinner-active {
+  /* for Animation fade purpose */
+  opacity: 100% !important;
+  max-width: 20px !important;
+}
+
+.form-data-parent .login-button:hover {
+  cursor: pointer;
+  background: #0095ff;
+}    
+
+.form-data-parent .login-button:disabled {
+  cursor: default;
+  background: #004993;
+}
+
+.form-data-parent .login-button:disabled p{
+  color: #cacaca;
+}

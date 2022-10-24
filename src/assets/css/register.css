@@ -1,0 +1,72 @@
+.form-data-parent .register-button {
+  margin-top: 40px;
+
+  width: 285px;
+  height: 37px;
+
+  background: none;
+  border-radius: 24px;
+  border: 1.5px solid #0071E3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  transition: border .1s ease-out 100ms;
+}
+
+.form-data-parent .register-button p {
+  color: #0071E3;
+  font-weight: 700;
+  margin: 0px;
+  transition: color .1s ease-out 100ms;
+}
+
+.form-button-spinner {
+  /* for Animation fade purpose */
+  opacity: 0%;
+  max-width: 0;
+  transition: max-width 0.25s ease-out,
+              opacity 0.25s ease-out;
+
+  overflow: hidden;
+}
+
+.form-button-spinner img {
+  height: 17px;
+  animation: rotation 1.5s infinite linear;
+}
+
+    @keyframes rotation {
+      from {
+      transform: rotate(0deg);
+      }
+      to {
+      transform: rotate(359deg);
+      }
+  }
+
+.spinner-active {
+  /* for Animation fade purpose */
+  opacity: 100% !important;
+  max-width: 20px !important;
+}
+
+.form-data-parent .register-button:hover {
+  cursor: pointer;
+  border: 1.5px solid #0095ff;
+}   
+
+.form-data-parent .register-button p:hover {
+  color: #0095ff;
+}   
+
+.form-data-parent .register-button:disabled {
+  cursor: default;
+  border: 1.5px solid #004993;
+}
+
+.form-data-parent .register-button:disabled p{
+  color: #004993;
+}
