@@ -112,6 +112,7 @@
 
       .app-white__task-container:hover {
         overflow: scroll;
+        overflow-x: hidden;
       }
 
           /* width */
