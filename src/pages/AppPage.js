@@ -2,9 +2,9 @@ import React from 'react';
 import '../assets/css/App.css';
 
 import dummyProfileImg from '../assets/img/dummy-logo.png'
-import settingImg from '../assets/img/setting.png'
-import addButtonImg from '../assets/img/add-button.png'
-import taskSettingImg from '../assets/img/list-setting.png'
+import settingImg from '../assets/img/setting.svg'
+import addButtonImg from '../assets/img/add-button.svg'
+import taskSettingImg from '../assets/img/list-setting.svg'
 
 
 function App() {
