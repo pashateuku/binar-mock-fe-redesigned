@@ -4,6 +4,8 @@ import '../assets/css/App.css';
 import dummyProfileImg from '../assets/img/dummy-logo.png'
 import settingImg from '../assets/img/setting.svg'
 import addButtonImg from '../assets/img/add-button.svg'
+import logoutIcon from '../assets/img/logout-icon.svg'
+import aboutIcon from '../assets/img/about-icon.svg'
 
 import TaskContainerComponent from '../components/App/TaskContainerComponent'
 
@@ -13,6 +15,12 @@ function App() {
     if(!token){
       window.location.href = '/login'
     }
+
+    // Logout Handler
+    const handleLogOut = () => {
+        localStorage.clear('token');
+        window.location.href = '/'
+      }
 
     return (
         <div className="app">
@@ -24,12 +32,23 @@ function App() {
                             <h3>Welcome, 1234</h3>
                         </div>
                         <div className='app-white-head__right'>
-                            <img src={settingImg} alt=''></img>
+                            <img className='setting-icon' src={settingImg} alt=''></img>
+                            <div className='dropdown-menu-app'>
+                                <div onClick={handleLogOut} className='dropdown-menu-app__list'>
+                                    <p>Log Out</p>
+                                    <img src={logoutIcon} alt=''/>
+                                </div>
+                                <div className='dropdown-line'/>
+                                <div className='dropdown-menu-app__list'>
+                                    <p>About</p>
+                                    <img src={aboutIcon} alt=''/>
+                                </div>
+                            </div>
                         </div>
                     </header>
                     <h2 className='app-white-title'>All Task</h2>
                     <form className='app-white-add_form'>
-                        <input 
+                        <input
                             className='input-text'
                             type='text'
                             placeholder='insert new task'
