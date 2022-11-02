@@ -8,7 +8,11 @@ import axios from 'axios';
 
 function App() {
 
-    // * TO DO: Buat Validator Token 🔸
+    // Validator Token
+    const token = localStorage.getItem('token');
+    if(token){
+      window.location.href = '/'
+    }
 
     //FOR Prompt Title and Message
     const promptPop = useRef()
@@ -83,9 +87,7 @@ function App() {
                     "Login Success",
                     "we will direct you to App in a few second"
                     )
-
-                // * TO DO: pasang delay 1 sec dan direct ke App 🔸
-                // window.location.href = '/'
+                window.location.href = '/'
             }
             else {
                 ShowPrompt(

@@ -8,7 +8,11 @@ import axios from 'axios';
 
 function App() {
 
-    // * TO DO: Buat Validator Token 🔸
+    // Validator Token
+    const token = localStorage.getItem('token');
+    if(token){
+        window.location.href = '/'
+    }
 
     //FOR Prompt Title and Message
     const promptPop = useRef()
