@@ -87,8 +87,7 @@ function App() {
                     "your account has maded, we will direct you to login page in a few second"
                     )
 
-                // * TO DO: pasang delay 1 sec dan direct ke App 🔸
-                // window.location.href = '/'
+                window.location.href = '/'
             }
             else {
                 ShowPrompt(
