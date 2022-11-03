@@ -10,17 +10,23 @@ import Login from './pages/LoginPage';
 import Register from './pages/RegisterPage';
 import App from './pages/AppPage';
 
+// import Redux
+import { Provider } from 'react-redux';
+import store from './app/store';
+
 // report web vitals
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+    <Provider store={store}>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />        
       </Routes>
+    </Provider>
   </BrowserRouter>
 );
 

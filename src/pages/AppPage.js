@@ -3,10 +3,10 @@ import '../assets/css/App.css';
 
 import dummyProfileImg from '../assets/img/dummy-logo.png'
 import settingImg from '../assets/img/setting.svg'
-import addButtonImg from '../assets/img/add-button.svg'
 import logoutIcon from '../assets/img/logout-icon.svg'
 import aboutIcon from '../assets/img/about-icon.svg'
 
+import TaskFormAddComponent from '../components/App/TaskFormAddComponent'
 import TaskContainerComponent from '../components/App/TaskContainerComponent'
 
 function App() {
@@ -47,17 +47,8 @@ function App() {
                         </div>
                     </header>
                     <h2 className='app-white-title'>All Task</h2>
-                    <form className='app-white-add_form'>
-                        <input
-                            className='input-text'
-                            type='text'
-                            placeholder='insert new task'
-                            id="desc"
-                            name="desc"
-                        />
-                        <input type='image' className='image-button' src={addButtonImg} alt=''/>
-                    </form>
-                    <TaskContainerComponent token={token}/>
+                    <TaskFormAddComponent tokenId={token}/>
+                    <TaskContainerComponent tokenId={token}/>
                 </div>
             </div>
         </div>
