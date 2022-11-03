@@ -19,7 +19,7 @@ function TaskContainerComponent(tokenId) {
     return (
         <div className='app-white__task-container'>
             {todos.map((todo) => (
-				<TaskListComponent id={todo.todo_id} taskTitle={todo.desc}/>
+				<TaskListComponent id={todo.todo_id} taskTitle={todo.desc} status={todo.status}/>
 			))}
         </div>
     )

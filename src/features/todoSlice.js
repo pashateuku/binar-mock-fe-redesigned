@@ -37,6 +37,20 @@ export const addTodoAsync = createAsyncThunk(
 	}
 );
 
+export const toggleTodoAsync = createAsyncThunk(
+	'todos/toggleTodoAsync',
+	async (payload) => {
+        await axios.post(`https://todo-binar-api.herokuapp.com/todo/toggle/${payload.todo_id}`, {
+            status: payload.reverseStatus
+        });
+        return { 
+			todo_id: payload.todo_id,
+			status: payload.reverseStatus
+		};
+	}
+);
+
+
 export const todoSlice = createSlice({
 	name: 'todos',
 	initialState: [],
@@ -49,10 +63,11 @@ export const todoSlice = createSlice({
 			};
 			state.push(todo);
 		},
-		// toggleComplete: (state, action) => {
-        // 	const index = state.findIndex((todo) => todo.id === action.payload.id);
-        // 	state[index].completed = action.payload.completed;
-		// },
+		toggleTodo: (state, action) => {
+        	const index = state.findIndex((todo) => todo.todo_id === action.payload.todo_id);
+			console.log('ini Reducer Standar')
+        	state[index].status = action.payload.reverseStatus;
+		},
 		deleteTodo: (state, action) => {
 			return state.filter((todos) => todos.todo_id !== action.payload.id);
 		},
@@ -64,12 +79,13 @@ export const todoSlice = createSlice({
 		[addTodoAsync.fulfilled]: (state, action) => {
 			state.push(action.payload.todos);
 		},
-		// [toggleCompleteAsync.fulfilled]: (state, action) => {
-		// 	const index = state.findIndex(
-		// 		(todo) => todo.id === action.payload.todo.id
-		// 	);
-		// 	state[index].completed = action.payload.todo.completed;
-		// },
+		[toggleTodoAsync.fulfilled]: (state, action) => {
+			const index = state.findIndex(
+				(todos) => todos.todo_id === action.payload.todo_id
+			);
+			console.log('ini extraReducer')
+			state[index].status = action.payload.status;
+		},
 		[deleteTodoAsync.fulfilled]: (state, action) => {
 			console.log(action.payload.id)
 			return state.filter((todos) => todos.todo_id !== action.payload.id);
