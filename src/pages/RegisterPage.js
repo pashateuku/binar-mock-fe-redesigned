@@ -165,7 +165,7 @@ function App() {
                         </button>
                     </form>
                 </div>
-                <a className='form-link' href='/'>Have Account?</a>
+                <a className='form-link' href='/login'>Have Account?</a>
             </div>
         </div>
     </div>

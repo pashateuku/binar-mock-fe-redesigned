@@ -164,7 +164,7 @@ function App() {
                         </button>
                     </form>
                 </div>
-                <a className='form-link' href='/'>Create Account?</a>
+                <a className='form-link' href='/register'>Create Account?</a>
             </div>
         </div>
     </div>
