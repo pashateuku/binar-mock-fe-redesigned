@@ -10,8 +10,6 @@ const TaskListComponent = ({ id, taskTitle}) => {
 
 	const handleDeleteClick = () => {
 		dispatch(deleteTodoAsync({ id }));
-        // * Refresher Sementara
-        window.location.href = '/'
 	};
 
     return(
