@@ -87,7 +87,9 @@ function App() {
                     "your account has maded, we will direct you to login page in a few second"
                     )
 
-                window.location.href = '/'
+                setTimeout(function () {
+                    window.location.href = '/'
+                  }, 2000);
             }
             else {
                 ShowPrompt(
