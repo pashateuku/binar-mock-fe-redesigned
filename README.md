@@ -1,6 +1,6 @@
-# 📝 Simple To Do List App
+# 📝 Simple To Do List App (Redesigned 🔨)
 
-This app is developed in order to complete [Binar Mock Technical Test](https://drive.google.com/file/d/1Hnw4OQe3BaniXJuuLfEk5_qJ266lbyEa/view). This is the newest version of client with updated UI and features, you can see the old one from this [link](https://github.com/pashateuku/binar-mock-fe)
+This app is developed in order to complete [Binar Mock Technical Test](https://drive.google.com/file/d/1Hnw4OQe3BaniXJuuLfEk5_qJ266lbyEa/view). This is the newest version of client with cleaner UI and new features, you can see the old one from this [link](https://github.com/pashateuku/binar-mock-fe)
 
   
 
