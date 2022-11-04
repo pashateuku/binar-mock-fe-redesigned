@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# 📝 Simple To Do List App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This app is developed in order to complete [Binar Mock Technical Test](https://drive.google.com/file/d/1Hnw4OQe3BaniXJuuLfEk5_qJ266lbyEa/view). This is the newest version of client with updated UI and features, you can see the old one from this [link](https://github.com/pashateuku/binar-mock-fe)
 
-## Available Scripts
+  
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Simple to do list web-app with simple auth, task saved in database and you can access it by log into your account. **This is the 🔵 Front End Side (React)**, you can directly move to 🔴 Back End Side (Express) repository by clicking this [link](https://github.com/pashateuku/binar-mock-be). you can see the deployed app by reaching this [link](https://simplydo.vercel.app/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How to Run
 
-### `npm test`
+1. Clone this repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
 
-### `npm run build`
+git clone  git@github.com:pashateuku/binar-mock-fe-redesigned.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Access the directory
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+cd binar-mock-fe
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Install required modules
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+4. Run the program
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
 
-### Analyzing the Bundle Size
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
 
-### Making a Progressive Web App
+  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Route
 
-### Advanced Configuration
+Here is all the routes you can access:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| No | Path | Explaination |
+|--|--|--|
+| 1 |`/register` | Register page |
+| 2 |`/login` | Login page |
+| 3 |`/` | To do list page |
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Features
+1. You can register new account by accessing `/register`'s page and input the require data which are 4-digit numeric user ID and password in the input form.
+2. You can login into your account by accessing `/login`'s page and input the require data which are 4-digit numeric user ID and password in the input form.
+3. You can create new task by accessing `/` 's page and fill the input form and click the `add` button.
+4. In the same page, you can delete the task by pressing '❌' in the listed task.
+5. you can press the checklist toogler on the left side to change your task status
+6. All the created task will be saved in the database, and you can access it anytime by login into your account.
