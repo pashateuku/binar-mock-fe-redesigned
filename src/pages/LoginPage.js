@@ -82,11 +82,11 @@ function App() {
             
             if(result.data.message === 'login success'){
                 localStorage.setItem('token', result.data.data.token);
-                ShowPrompt(
-                    "success",
-                    "Login Success",
-                    "we will direct you to App in a few second"
-                    )
+                // ShowPrompt(
+                //     "success",
+                //     "Login Success",
+                //     "we will direct you to App in a few second"
+                //     )
                 window.location.href = '/'
             }
             else {
