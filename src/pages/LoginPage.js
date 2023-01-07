@@ -75,7 +75,7 @@ function App() {
     
     // Run Axios
       try {
-            const result = await axios.post('https://todo-binar-api.herokuapp.com/login', {
+            const result = await axios.post('https://todo-binar-api.fly.dev/login', {
                 user_4id: userId,
                 password: password
             })

@@ -5,7 +5,7 @@ import { nanoid } from 'nanoid';
 export const getTodosAsync = createAsyncThunk(
 	'todos/getTodosAsync',
 	async (payload) => {
-        const res = await axios.get(`https://todo-binar-api.herokuapp.com/todo/${payload.id}`)
+        const res = await axios.get(`https://todo-binar-api.fly.dev/todo/${payload.id}`)
             const todosData = await res
             const todos = todosData.data.data.todo_data
             console.log(todos)
@@ -16,7 +16,7 @@ export const getTodosAsync = createAsyncThunk(
 export const deleteTodoAsync = createAsyncThunk(
 	'todos/deleteTodoAsync',
 	async (payload) => {
-        await axios.post(`https://todo-binar-api.herokuapp.com/todo/delete/${payload.id}`)
+        await axios.post(`https://todo-binar-api.fly.dev/todo/delete/${payload.id}`)
         return { id: payload.id };
 	}
 );
@@ -24,7 +24,7 @@ export const deleteTodoAsync = createAsyncThunk(
 export const addTodoAsync = createAsyncThunk(
 	'todos/addTodoAsync',
 	async (payload) => {
-        const res = await axios.post('https://todo-binar-api.herokuapp.com/todo/create', {
+        const res = await axios.post('https://todo-binar-api.fly.dev/todo/create', {
             foreign_id: payload.foreign_id,
             todo_id: nanoid(),
             desc: payload.title,
@@ -40,7 +40,7 @@ export const addTodoAsync = createAsyncThunk(
 export const toggleTodoAsync = createAsyncThunk(
 	'todos/toggleTodoAsync',
 	async (payload) => {
-        await axios.post(`https://todo-binar-api.herokuapp.com/todo/toggle/${payload.todo_id}`, {
+        await axios.post(`https://todo-binar-api.fly.dev/todo/toggle/${payload.todo_id}`, {
             status: payload.reverseStatus
         });
         return { 
